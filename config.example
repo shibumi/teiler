@@ -1,9 +1,8 @@
 ###### teiler configuration file ######
-
 source $HOME/.config/dmenurc
 
 
-#   general options
+# general options
 
 img_path=$HOME/Pictures/Screenshots
 paste_path=$HOME/Pictures/Paste
@@ -19,24 +18,25 @@ paste_filemask=$(date +"%Y%m%d%H%M%S")
 
 
 
-#   Uploading & archiving options
-#   Possible Choices for ul: fb, scp, imgur
-#   Possible Choices for paste_ul: fb, scp, ix
-#   If you don't want a local history of images/videos, 
-#   set archive_img/archive_vid to "0"
-#   keep in mind, that imgur does not support videos
+# Uploading & archiving options
+# Possible Choices for ul: fb, scp, imgur (imgur does not support videos)
+# Possible Choices for paste_ul: fb, scp, ix
+#
+# If you don't want a local history of images/videos, 
+# set archive_img/archive_vid to "0"
+# keep in mind, that imgur does not support videos
 
-ul=fb
-paste_ul=fb
+ul=imgur
+paste_ul=ix
 archive_vid=1
 archive_img=1
 archive_paste=1
 
 
 
-#   quick option to quickly make a screenshot and upload in one go...
-#   set quickArea to "-s" to enable Area, leave empty for Fullscreen
-#   The "7." at the beginning is mandatory
+# quick option to quickly make a screenshot and upload in one go...
+# set quickArea to "-s" to enable Area, leave empty for Fullscreen
+# The "7." at the beginning is mandatory
 
 quickArea=-s
 quickDelay=0
@@ -44,7 +44,7 @@ quickName="7. Shot'n'Go"
 
 
 
-#   Scp options
+# scp options
 
 scp_host=
 scp_path_img=
@@ -56,12 +56,12 @@ http_paste=
 
 
 
-#   Ffmpeg settings
-#   Possible encoder options: libav and ffmpeg
+# Ffmpeg settings
+# Possible encoder options: libav and ffmpeg
 
 encoder=ffmpeg
 res=1920x1080
-ffmpeg_x_offset=0,0
+ffmpeg_offset=0,0
 
 encopts="-r 30 \
          -vcodec libx264 \
@@ -76,7 +76,8 @@ ffaudio="-f alsa \
 ffmpeg_display=$(echo $DISPLAY)
 
 
-#   record indicator
+
+# record indicator
 
 rec_text="capturing..."
 rec_w="100"
